@@ -31,17 +31,6 @@ planner_configs:
   RRTConnectkConfigDefault:
     type: geometric::RRTConnect
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
-  RRTEstimatekConfigDefault:
-    type: geometric::RRTEstimate
-    range: 0.0
-    goal_bias: 0.05
-    radius: 5.5
-    resolution: 0.005
-  RRTConnectEstimatekConfigDefault:
-    type: geometric::RRTConnectEstimate
-    range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
-    radius: 5.5
-    resolution: 0.005
   RRTstarkConfigDefault:
     type: geometric::RRTstar
     range: 0.0  # Max motion added to tree. ==> maxDistance_ default: 0.0, if 0.0, set on setup()
@@ -140,8 +129,6 @@ larm:
     - KPIECEkConfigDefault
     - RRTkConfigDefault
     - RRTConnectkConfigDefault
-    - RRTEstimatekConfigDefault
-    - RRTConnectEstimatekConfigDefault
     - RRTstarkConfigDefault
     - TRRTkConfigDefault
     - PRMkConfigDefault
@@ -169,8 +156,6 @@ rarm:
     - KPIECEkConfigDefault
     - RRTkConfigDefault
     - RRTConnectkConfigDefault
-    - RRTEstimatekConfigDefault
-    - RRTConnectEstimatekConfigDefault
     - RRTstarkConfigDefault
     - TRRTkConfigDefault
     - PRMkConfigDefault
@@ -198,8 +183,6 @@ both_arms:
     - KPIECEkConfigDefault
     - RRTkConfigDefault
     - RRTConnectkConfigDefault
-    - RRTEstimatekConfigDefault
-    - RRTConnectEstimatekConfigDefault
     - RRTstarkConfigDefault
     - TRRTkConfigDefault
     - PRMkConfigDefault
@@ -227,8 +210,6 @@ hole_body:
     - KPIECEkConfigDefault
     - RRTkConfigDefault
     - RRTConnectkConfigDefault
-    - RRTEstimatekConfigDefault
-    - RRTConnectEstimatekConfigDefault
     - RRTstarkConfigDefault
     - TRRTkConfigDefault
     - PRMkConfigDefault
