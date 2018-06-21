@@ -4,7 +4,7 @@
   <arg name="cfg" default="$(find motoman_moveit_config)/config/benchmark_config.cfg"/>
   <arg name="load_robot_description" value="true"/>
   <arg name="urdf_model" value="$(find motoman_description)/robots/sia5/sia5.urdf.xacro"/>
-  <arg name="srdf_model" value="$(find motoman_moveit_config)/sia5.srdf"/>
+  <arg name="srdf_model" value="$(find motoman_moveit_config)/config/sia5.srdf"/>
   <arg name="joint_limits_config" value="$(find motoman_moveit_config)config/joint_limits.yaml"/>
   <arg name="kinematics_config" value="$(find motoman_moveit_config)/config/kinematics.yaml"/>
   <arg name="controllers_config" value="$(find motoman_moveit_config)/config/controllers.yaml"/>
