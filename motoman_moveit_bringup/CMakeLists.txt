@@ -53,9 +53,45 @@ catkin_package()
 #   ${Boost_LIBRARIES}
 #   ${EIGEN_LIBRARIES}
 #   )
+#############
+## Install ##
+#############
+# Python scripts
+set(PYTHON_SCRPTS
+  scripts/moveit_command_sender_cartesian.py
+  scripts/moveit_command_sender_multi.py
+  scripts/moveit_command_sender.py
+  scripts/moveit_joy.py
+)
+foreach(scripts ${PYTHON_SCRIPTS})
+  catkin_install_python(PROGRAMS ${scripts}
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+endforeach(scripts)
+# Install all files
+set(CONFIG_DIRS
+  config/sda5
+  config/sia5
+  config/sia5_with_dhand
+  config/sia5_with_dhand_and_multi_kinect
+  config/sia5_with_kinectv2
+  config/sia5_with_multi_kinectv2
   )
+set(LAUNCH_DIRS
+  launch/sda5
+  launch/sda5/rviz
+  launch/sia5
+  launch/sda5/rviz
+)
+foreach(dir ${CONFIG_DIRS} ${LAUNCH_DIRS} scene)
+  install(DIRECTORY ${dir}/
+    DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
+endforeach(dir)
 
+#############
+## Testing ##
+#############
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
-  roslaunch_add_file_check(launch)
+  roslaunch_add_file_check(launch/sda5)
+  roslaunch_add_file_check(launch/sia5)
 endif()
