@@ -14,7 +14,7 @@
   <arg name="octomap_resolution_value" default="0.05"/>
   <arg name="sensor_max_range" default="4.5"/>
   <arg name="planning_config" default="ompl"/>
-  <arg name="rviz_config"/>
+  <arg name="rviz_config" default="$(find motoman_moveit_config)/config/moveit_sia5.rviz"/>
   <arg name="ompl_config" default="$(find motoman_moveit_config)/config/ompl_planning.yaml"/>
   <arg name="use_ompl" default="false"/>
   <arg name="use_stomp" default="false"/>
