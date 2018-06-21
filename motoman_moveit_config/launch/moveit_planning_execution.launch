@@ -2,19 +2,19 @@
 
   <!-- Arguments for move_group -->
   <arg name="load_robot_description" default="true"/>
-  <arg name="urdf_model" default="$(find motoman_description)/robots/sia5/urdf/sia5.urdf"/>
-  <arg name="srdf_model" default="$(find motoman_moveit)/config/sia5/sia5.srdf"/>
-  <arg name="joint_limits_config" default="$(find motoman_moveit)/config/sia5/joint_limits.yaml"/>
-  <arg name="kinematics_config" default="$(find motoman_moveit)/config/sia5/kinematics.yaml"/>
-  <arg name="controllers_config" default="$(find motoman_moveit)/config/sia5/controllers.yaml"/>
+  <arg name="urdf_model" default="$(find motoman_description)/robots/sia5/sia5.urdf.xacro"/>
+  <arg name="srdf_model" default="$(find motoman_moveit_config)/config/sia5.srdf"/>
+  <arg name="joint_limits_config" default="$(find motoman_moveit_config)/config/joint_limits.yaml"/>
+  <arg name="kinematics_config" default="$(find motoman_moveit_config)/config/kinematics.yaml"/>
+  <arg name="controllers_config" default="$(find motoman_moveit_config)/config/controllers.yaml"/>
   <arg name="moveit_controller_manager" default="sia5"/>
   <arg name="use_depth_sensor" default="false"/>
-  <arg name="sensor_config" default="$(find motoman_moveit)/config/sia5_with_kinectv2/kinect2.yaml"/>
+  <arg name="sensor_config" default="$(find motoman_moveit_config)/config/kinect2.yaml"/>
   <arg name="octomap_frame_name" default="kinect2_link"/>
   <arg name="octomap_resolution_value" default="0.05"/>
   <arg name="sensor_max_range" default="4.5"/>
   <arg name="planning_config" default="ompl"/>
-  <arg name="rviz_config"/>
+  <arg name="rviz_config" default="$(find motoman_moveit_config)/config/moveit_sia5.rviz"/>
   <arg name="ompl_config" default="$(find motoman_moveit_config)/config/ompl_planning.yaml"/>
   <arg name="use_ompl" default="false"/>
   <arg name="use_stomp" default="false"/>

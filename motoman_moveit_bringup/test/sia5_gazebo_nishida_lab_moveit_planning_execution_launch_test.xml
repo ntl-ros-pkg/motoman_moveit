@@ -1,3 +1,0 @@
-<launch>
- <include file="$(find motoman_moveit)/launch/sia5_gazebo_nishida_lab_moveit_planning_execution.launch"/>
-</launch>
