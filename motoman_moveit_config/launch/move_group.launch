@@ -9,18 +9,18 @@
   <!-- From here, there are original arguments -->
   <arg name="load_robot_description" default="true"/>
   <arg name="urdf_model" default="$(find motoman_description)/robots/sia5/sia5.urdf.xacro"/>
-  <arg name="srdf_model" default="$(find motoman_moveit_config)/config/sia5/sia5.srdf"/>
-  <arg name="joint_limits_config" default="$(find motoman_moveit_config)/config/sia5/joint_limits.yaml"/>
-  <arg name="kinematics_config" default="$(find motoman_moveit_config)/config/sia5/kinematics.yaml"/>
-  <arg name="controllers_config" default="$(find motoman_moveit_config)/config/sia5/controllers.yaml"/>
+  <arg name="srdf_model" default="$(find motoman_moveit_config)/config/sia5.srdf"/>
+  <arg name="joint_limits_config" default="$(find motoman_moveit_config)/config/joint_limits.yaml"/>
+  <arg name="kinematics_config" default="$(find motoman_moveit_config)/config/kinematics.yaml"/>
+  <arg name="controllers_config" default="$(find motoman_moveit_config)/config/controllers.yaml"/>
   <arg name="moveit_controller_manager" default="sia5"/>
   <arg name="use_depth_sensor" default="false"/>
-  <arg name="sensor_config" default="$(find motoman_moveit_config)/config/sia5_with_kinectv2/kinect2.yaml"/>
+  <arg name="sensor_config" default="$(find motoman_moveit_config)/config/kinect2.yaml"/>
   <arg name="octomap_frame_name" default="kinect2_link"/>
   <arg name="octomap_resolution_value" default="0.05"/>
   <arg name="sensor_max_range" default="4.5"/>
   <arg name="planning_config" default="ompl"/>
-  <arg name="ompl_config" default="$(find motoman_moveit_config)/config/sia5/ompl_planning.yaml"/>
+  <arg name="ompl_config" default="$(find motoman_moveit_config)/config/ompl_planning.yaml"/>
   <arg name="use_ompl" default="true"/>
   <arg name="use_stomp" default="false"/>
 
@@ -61,13 +61,11 @@
 
   <!-- Sensors Functionality -->
   <include ns="move_group" file="$(find motoman_moveit_config)/launch/sensor_manager.launch.xml" if="$(arg use_depth_sensor)">
-    <arg name="moveit_sensor_manager" value="$(arg moveit_controller_manager)" />
     <arg name="use_depth_sensor" value="$(arg use_depth_sensor)"/>
     <arg name="sensor_config" value="$(arg sensor_config)"/>
     <arg name="octomap_frame_name" value="$(arg octomap_frame_name)"/>
     <arg name="octomap_resolution_value" value="$(arg octomap_resolution_value)"/>
     <arg name="sensor_max_range" value="$(arg sensor_max_range)"/>
-    <arg name="moveit_sensor_manager" value="$(arg moveit_sensor_manager)"/>
   </include>
 
   <!-- Start the actual move_group node/action server -->
