@@ -26,6 +26,5 @@
   <exec_depend>rviz</exec_depend>
   <exec_depend>warehouse_ros</exec_depend>
   <exec_depend>motoman_description</exec_depend>
-  <exec_depend>motoman_moveit_bringup</exec_depend>
   
 </package>
