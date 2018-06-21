@@ -6,6 +6,14 @@ catkin_package()
 #############
 ## Install ##
 #############
+# Python scripts
+set(PYTHON_SCRPTS
+  scripts/moveit_joy.py
+)
+foreach(scripts ${PYTHON_SCRIPTS})
+  catkin_install_python(PROGRAMS ${scripts}
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+endforeach(scripts)
 # Install all files
 foreach(dir launch)
   install(DIRECTORY ${dir}/

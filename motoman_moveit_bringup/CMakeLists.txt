@@ -61,7 +61,6 @@ set(PYTHON_SCRPTS
   scripts/moveit_command_sender_cartesian.py
   scripts/moveit_command_sender_multi.py
   scripts/moveit_command_sender.py
-  scripts/moveit_joy.py
 )
 foreach(scripts ${PYTHON_SCRIPTS})
   catkin_install_python(PROGRAMS ${scripts}

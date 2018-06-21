@@ -12,6 +12,6 @@
   </node>
 
   <!-- Launch python interface -->
-  <node pkg="motoman_moveit_bringup" type="moveit_joy.py" output="screen" name="moveit_joy"/>
+  <node pkg="motoman_moveit_config" type="moveit_joy.py" output="screen" name="moveit_joy"/>
 
 </launch>
