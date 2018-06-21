@@ -1,6 +1,6 @@
 <launch>
 
-  <arg name="fake_controllers_config" default="$(find motoman_moveit)/config/sia5/fake_controllers.yaml"/>
+  <arg name="fake_controllers_config" default="$(find motoman_moveit_config)/config/sia5/fake_controllers.yaml"/>
   
   <!-- Set the param that trajectory_execution_manager needs to find the controller plugin -->
   <param name="moveit_controller_manager" value="moveit_fake_controller_manager/MoveItFakeControllerManager"/>
