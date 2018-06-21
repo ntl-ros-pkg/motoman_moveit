@@ -7,7 +7,6 @@
   <arg name="srdf_model" value="$(find motoman_moveit_config)/config/sia5.srdf"/>
   <arg name="joint_limits_config" value="$(find motoman_moveit_config)config/joint_limits.yaml"/>
   <arg name="kinematics_config" value="$(find motoman_moveit_config)/config/kinematics.yaml"/>
-  <arg name="controllers_config" value="$(find motoman_moveit_config)/config/controllers.yaml"/>
   <arg name="use_depth_sensor" value="false"/>
   <arg name="rviz_config" value="$(find motoman_moveit_config)/launch/rviz/moveit_sia5.rviz"/>
   <!-- Load URDF -->
