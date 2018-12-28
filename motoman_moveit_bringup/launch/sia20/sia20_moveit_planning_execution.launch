@@ -1,0 +1,21 @@
+<launch>
+  <include file="$(find motoman_moveit_config)/launch/moveit_planning_execution.launch">
+    <arg name="load_robot_description" value="true"/>
+    <arg name="urdf_model" value="$(find motoman_description)/robots/sia20/sia20.urdf.xacro"/>
+    <arg name="srdf_model" value="$(find motoman_moveit_bringup)/config/sia20/sia20.srdf"/>
+    <arg name="joint_limits_config" value="$(find motoman_moveit_bringup)/config/sia20/joint_limits.yaml"/>
+    <arg name="kinematics_config" value="$(find motoman_moveit_bringup)/config/sia20/kinematics.yaml"/>
+    <arg name="controllers_config" value="$(find motoman_moveit_bringup)/config/sia20/controllers.yaml"/>
+    <arg name="moveit_controller_manager" value="sia20"/>
+    <arg name="use_depth_sensor" value="false"/>
+    <arg name="rviz_config" value="$(find motoman_moveit_bringup)/launch/sia20/rviz/moveit_sia20.rviz"/>
+    <!-- Configuration planning library -->
+    <arg name="ompl_config" default="$(find motoman_moveit_bringup)/config/sia20/ompl_planning.yaml"/>
+    <!-- Choose planner [ompl|chomp|stomp] -->
+    <arg name="planning_config" default="ompl"/>
+    <!-- If you choose ompl, "use_ompl" is true. -->
+    <arg name="use_ompl" default="true"/>
+    <!-- If you choose stomp, "use_stomp" is true. -->
+    <arg name="use_stomp" default="false"/>
+  </include>
+</launch>
