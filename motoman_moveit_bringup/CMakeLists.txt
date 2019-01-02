@@ -79,7 +79,7 @@ set(LAUNCH_DIRS
   launch/sda5
   launch/sda5/rviz
   launch/sia5
-  launch/sda5/rviz
+  launch/sia5/rviz
 )
 foreach(dir ${CONFIG_DIRS} ${LAUNCH_DIRS} scene)
   install(DIRECTORY ${dir}/
