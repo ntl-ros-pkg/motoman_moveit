@@ -1,5 +1,8 @@
 <launch>
 
+  <arg name="rviz_config" default="$(find motoman_moveit_config_motomini)/config/moveit_motomini.rviz"/>
+  <arg name="kinematics_config" default="$(find motoman_moveit_config_motomini)/config/kinematics.yaml"/>
+
   <arg name="debug" default="false" />
   <arg unless="$(arg debug)" name="launch_prefix" value="" />
   <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
