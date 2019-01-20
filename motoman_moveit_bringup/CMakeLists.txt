@@ -68,6 +68,7 @@ foreach(scripts ${PYTHON_SCRIPTS})
 endforeach(scripts)
 # Install all files
 set(CONFIG_DIRS
+  config/motomini_with_gripper
   config/sda5
   config/sia5
   config/sia5_with_dhand
@@ -76,6 +77,8 @@ set(CONFIG_DIRS
   config/sia5_with_multi_kinectv2
   )
 set(LAUNCH_DIRS
+  launch/motomini
+  launch/motomini/rviz
   launch/sda5
   launch/sda5/rviz
   launch/sia5
@@ -91,6 +94,7 @@ endforeach(dir)
 #############
 if (CATKIN_ENABLE_TESTING)
   find_package(roslaunch REQUIRED)
+  roslaunch_add_file_check(launch/motomini)
   roslaunch_add_file_check(launch/sda5)
   roslaunch_add_file_check(launch/sia5)
 endif()

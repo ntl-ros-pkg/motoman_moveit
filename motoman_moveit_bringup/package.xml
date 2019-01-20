@@ -26,6 +26,7 @@
   <depend>warehouse_ros</depend>
   <exec_depend>rviz</exec_depend>
   <exec_depend>motoman_moveit_config</exec_depend>
+  <exec_depend>motoman_moveit_config_motomini</exec_depend>
   <exec_depend>motoman_description</exec_depend>
 
 </package>
