@@ -51,7 +51,7 @@
   </include>
 
   <!-- Run the DB server -->
-  <include file="$(find motoman_moveit_config_motomini)/launch/warehouse.launch"/>
+  <!--include file="$(find motoman_moveit_config_motomini)/launch/warehouse.launch"/-->
 </launch>
 
 

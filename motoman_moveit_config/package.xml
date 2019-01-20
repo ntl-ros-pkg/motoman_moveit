@@ -8,13 +8,14 @@
 
   <maintainer email="groadpg@gmail.com">RyodoTanaka</maintainer>
   <maintainer email="ry0@todo.todo">ry0</maintainer>
+  <maintainer email="p595201m@mail.kyutech.jp">MoriKen254</maintainer>
 
   <license>BSD</license>
 
   <url type="repository">http://github.com/Nishida-Lab/motoman_moveit</url>
   
   <buildtool_depend>catkin</buildtool_depend>
-  <depend>roslaunch</depend>
+  <exec_depend>roslaunch</exec_depend>
   <exec_depend>moveit_ros_move_group</exec_depend>
   <exec_depend>moveit_planners_ompl</exec_depend>
   <exec_depend>moveit_ros_visualization</exec_depend>
